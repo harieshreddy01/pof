@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hariesh Reddy's Portfolio</title>
+    <style>
+        /* CSS Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #121212;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header ul {
+            list-style: none;
+        }
+
+        header li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 50px;
+        }
+
+        .intro h1 {
+            font-size: 2.5em;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            color: #999;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            border: none;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .profile-pic img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        .worked-with {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .worked-with img {
+            margin: 10px;
+            width: 50px;
+            filter: brightness(0) invert(1);
+        }
+
+        #projects, #skills, #contact {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .project, #skills ul {
+            margin: 20px 0;
+        }
+
+        .project h3 {
+            font-size: 1.5em;
+            color: #28a745;
+        }
+
+        .project p {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            <h1>Kambam Hariesh Reddy</h1>
+            <p>B.Tech Computer Engineering</p>
+            <button onclick="window.location.href='#contact'">Let's get started</button>
+        </div>
+        <div class="profile-pic">
+            <img src="image.png" alt="Hariesh's Profile Picture">
+        </div>
+        <div class="worked-with">
+            <p>Worked with:</p>
+            <img src="clickup-logo.png" alt="ClickUp">
+            <img src="dropbox-logo.png" alt="Dropbox">
+            <img src="paychex-logo.png" alt="Paychex">
+            <img src="elastic-logo.png" alt="Elastic">
+            <img src="stripe-logo.png" alt="Stripe">
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Loan Amount Prediction</h3>
+            <p>Technologies: Python, Flask, Numpy, Pandas, DenseNet121</p>
+            <p>Description: Developed a Gaussian Naive Bayes model for loan prediction.</p>
+        </div>
+        <div class="project">
+            <h3>Breast Cancer Analysis Using ML</h3>
+            <p>Technologies: Matplotlib, Pandas, NumPy, Scikit-learn</p>
+            <p>Description: Created a model to distinguish between malignant and benign tumors.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Python, SQL (Postgres), R</li>
+            <li>Data Analytics, Machine Learning, Tensor Flow, NLP</li>
+            <li>Data Visualization, Predictive Analytics</li>
+            <li>Tools: VS Code, Visual Studio, PyCharm, IntelliJ, Jupyter Notebook</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:harieshreddy01@gmail.com">harieshreddy01@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kambam-hariesh-reddy/">linkedin.com/in/kambam-hariesh-reddy</a></p>
+        <p>Phone: 9307294315</p>
+    </section>
+
+    <script>
+        // JavaScript code for smooth scrolling and button alert
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Alert when "Let's get started" button is clicked
+        document.querySelector('button').addEventListener('click', () => {
+            alert("Welcome to Hariesh Reddy's Portfolio!");
+        });
+    </script>
+</body>
+</html>
